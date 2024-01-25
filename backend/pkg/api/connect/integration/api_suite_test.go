@@ -70,7 +70,7 @@ func (s *APISuite) SetupSuite() {
 
 	// 2. Start Redpanda Docker container
 	container, err := redpanda.RunContainer(ctx,
-		testcontainers.WithImage("redpandadata/redpanda:v23.3.2"),
+		testcontainers.WithImage("redpandadata/redpanda:v23.3.3"),
 		network.WithNetwork([]string{"redpanda"}, s.network),
 		redpanda.WithListener("redpanda:29092"),
 	)
@@ -139,6 +139,10 @@ func (s *APISuite) SetupSuite() {
 			},
 		},
 	}
+	s.cfg.Redpanda.AdminAPI.Enabled = true
+	addr, err := container.AdminAPIAddress(ctx)
+	require.NoError(err)
+	s.cfg.Redpanda.AdminAPI.URLs = []string{addr}
 	s.api = api.New(s.cfg)
 
 	go s.api.Start()
