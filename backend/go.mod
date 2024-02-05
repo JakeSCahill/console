@@ -11,7 +11,6 @@ require (
 	github.com/carlmjohnson/requests v0.23.5
 	github.com/cloudhut/common v0.10.0
 	github.com/cloudhut/connect-client v0.0.0-20240122153328-02a3103805d8
-	github.com/davecgh/go-spew v1.1.1
 	github.com/docker/go-connections v0.5.0
 	github.com/dop251/goja v0.0.0-20231027120936-b396bb4c349d
 	github.com/getkin/kin-openapi v0.122.0
@@ -38,8 +37,8 @@ require (
 	github.com/redpanda-data/redpanda/src/go/rpk v0.0.0-20240105044330-c094966ca0cf
 	github.com/santhosh-tekuri/jsonschema/v5 v5.3.1
 	github.com/stretchr/testify v1.8.4
-	github.com/testcontainers/testcontainers-go v0.27.0
-	github.com/testcontainers/testcontainers-go/modules/redpanda v0.27.1-0.20240112110335-2309c4ecaf2f
+	github.com/testcontainers/testcontainers-go v0.27.1-0.20240205180000-0e16af2f0301
+	github.com/testcontainers/testcontainers-go/modules/redpanda v0.27.1-0.20240205180000-0e16af2f0301
 	github.com/twmb/franz-go v1.15.4
 	github.com/twmb/franz-go/pkg/kadm v1.10.0
 	github.com/twmb/franz-go/pkg/kfake v0.0.0-20230703040638-f324841a32b4
@@ -66,7 +65,6 @@ require (
 require (
 	dario.cat/mergo v1.0.0 // indirect
 	github.com/Azure/go-ansiterm v0.0.0-20230124172434-306776ec8161 // indirect
-	github.com/Masterminds/semver/v3 v3.2.1 // indirect
 	github.com/Microsoft/go-winio v0.6.1 // indirect
 	github.com/Microsoft/hcsshim v0.11.4 // indirect
 	github.com/ProtonMail/go-crypto v0.0.0-20230923063757-afb1ddc0824c // indirect
@@ -84,11 +82,12 @@ require (
 	github.com/cpuguy83/dockercfg v0.3.1 // indirect
 	github.com/cpuguy83/go-md2man/v2 v2.0.3 // indirect
 	github.com/cyphar/filepath-securejoin v0.2.4 // indirect
+	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/decred/dcrd/dcrec/secp256k1/v4 v4.2.0 // indirect
 	github.com/derekparker/trie v0.0.0-20230829180723-39f4de51ef7d // indirect
 	github.com/distribution/reference v0.5.0 // indirect
 	github.com/dlclark/regexp2 v1.10.0 // indirect
-	github.com/docker/docker v25.0.1+incompatible // indirect
+	github.com/docker/docker v25.0.2+incompatible // indirect
 	github.com/docker/go-units v0.5.0 // indirect
 	github.com/emirpasic/gods v1.18.1 // indirect
 	github.com/felixge/httpsnoop v1.0.3 // indirect
@@ -194,9 +193,4 @@ require (
 	gopkg.in/warnings.v0 v0.1.2 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
-)
-
-replace (
-	github.com/testcontainers/testcontainers-go v0.27.0 => github.com/gene-redpanda/testcontainers-go v0.27.1-0.20240126201417-2ce7ff79ca84
-	github.com/testcontainers/testcontainers-go/modules/redpanda v0.27.1-0.20240112110335-2309c4ecaf2f => github.com/gene-redpanda/testcontainers-go/modules/redpanda v0.27.1-0.20240126201417-2ce7ff79ca84
 )
